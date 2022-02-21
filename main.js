@@ -8,7 +8,7 @@ const server = Express();
 server.use(BodyParser.json());
 server.use(BodyParser.urlencoded({ extended: true }));
 
-const client = new MongoClient("mongodb://localhost:27017");
+const client = new MongoClient("mongodb+srv://hesukastro:nEAmpNLUibdAdLEC@geebee.xz3el.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 var patients;
 var records;
@@ -86,12 +86,12 @@ server.delete("/patients/:patientID", async (request, response, next) => {
     }
 });
 
-server.listen(process.env.PORT || "3000", async () => {
+server.listen(process.env.PORT, async () => {
     try {
         await client.connect();
         patients = client.db("GeeBee").collection("Patients");
         records = client.db("GeeBee").collection("Records");
-        console.log("Listening at :3000...");
+        console.log("Listening...");
     } catch (e) {
         console.error(e);
     }
