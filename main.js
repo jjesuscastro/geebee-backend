@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectID } = require("mongodb");
 const Express = require("express");
 const BodyParser = require('body-parser');
 const e = require("express");
@@ -91,7 +91,7 @@ server.listen(process.env.PORT, async () => {
     try {
         await client.connect();
         patients = client.db("GeeBee").collection("Patients");
-        records = client.db("GeeBee").collection("Records");
+        // records = client.db("GeeBee").collection("Records");
         console.log("Listening...");
     } catch (e) {
         console.error(e);
