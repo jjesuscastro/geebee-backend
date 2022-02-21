@@ -5,10 +5,10 @@ const e = require("express");
 
 const server = Express();
 
-server.use(BodyParser.urlencoded({ extended: true }));
 server.use(BodyParser.json());
+server.use(BodyParser.urlencoded({ extended: true }));
 
-const client = new MongoClient("mongodb+srv://hesukastro:nEAmpNLUibdAdLEC@geebee.xz3el.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+const client = new MongoClient("mongodb+srv://hesukastro:nEAmpNLUibdAdLEC@geebee.xz3el.mongodb.net/GeeBee?retryWrites=true&w=majority");
 
 var patients;
 var records;
