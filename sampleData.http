@@ -1,0 +1,42 @@
+POST http://localhost:3000/patients
+content-type: application/json
+
+{
+    "patientID": 2,
+    "firstName": "Rafael",
+    "lastName": "Tanchuan",
+    "gender": "Male",
+    "birthDate": "",
+    "handedness": "Right-handed",
+    "testResults": [
+        {
+            "height": 164,
+            "weight": 80,
+            "visualAcuityLeft": "20/20",
+            "visualAcuityRight": "20/20",
+            "colorVision": "good",
+            "hearingLeft": "good",
+            "hearingRight": "good",
+            "grossMotor": 100,
+            "fineMotorDominant": 100,
+            "fineMotorNDominant": 100,
+            "fineMotorHold": 100,
+            "patientImage": "",
+            "remarks": "",
+            "testDate": ""
+        }
+    ],
+    "dateCreated": ""
+}
+
+POST http://localhost:3000/records
+content-type: application/json
+
+{
+    "patientID": "JCastro09012022224127469",
+    "height": 163,
+    "weight": 80,
+    "bmi": 30.5,
+    "visualAcuityLeft": "Normal",
+    "visualAcuityRight": "Right"
+}
