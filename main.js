@@ -87,7 +87,7 @@ server.delete("/patients/:patientID", async (request, response, next) => {
     }
 });
 
-server.listen(3000, async () => {
+server.listen(process.env.PORT || 3000, async () => {
     try {
         await client.connect();
         patients = client.db("GeeBee").collection("Patients");
