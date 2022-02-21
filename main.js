@@ -39,6 +39,7 @@ server.get("/patients", async (request, response, next) => {
         let result = await patients.find({}).toArray();
         response.send(result);
     } catch (e) {
+        console.log('huh');
         response.status(500).send({ message: e.message });
     }
 });
