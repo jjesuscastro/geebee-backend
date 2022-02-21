@@ -1,4 +1,4 @@
-const { MongoClient, ObjectID } = require("mongodb");
+const { MongoClient } = require("mongodb");
 const Express = require("express");
 const BodyParser = require('body-parser');
 const e = require("express");
@@ -40,7 +40,6 @@ server.get("/patients", async (request, response, next) => {
         response.send(result);
     } catch (e) {
         console.log(patients);
-        console.log(client);
         response.status(500).send({ message: e.message });
     }
 });
