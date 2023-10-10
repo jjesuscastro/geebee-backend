@@ -8,8 +8,7 @@ const server = Express();
 server.use(BodyParser.json());
 server.use(BodyParser.urlencoded({ extended: true }));
 
-// const client = new MongoClient("mongodb+srv://hesukastro:nEAmpNLUibdAdLEC@geebee.xz3el.mongodb.net/GeeBee?retryWrites=true&w=majority");
-const client = new MongoClient("https://console.firebase.google.com/u/0/project/geebee-2bae0/database/geebee-2bae0-default-rtdb/data/~2F");
+const client = new MongoClient("mongodb+srv://hesukastro:nEAmpNLUibdAdLEC@geebee.xz3el.mongodb.net/GeeBee?retryWrites=true&w=majority");
 
 var patients;
 var records;
